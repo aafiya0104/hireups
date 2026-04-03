@@ -60,7 +60,7 @@ export function Navbar() {
       y: -20,
       transition: {
         duration: 0.2,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,  // ✅
       },
     },
     open: {
@@ -68,18 +68,17 @@ export function Navbar() {
       y: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 sm:px-12 lg:px-20 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 sm:px-12 lg:px-20 ${isScrolled
           ? "bg-secondary/90 backdrop-blur-md py-4 shadow-sm"
           : "bg-transparent py-6"
-      }`}
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: EASE }}

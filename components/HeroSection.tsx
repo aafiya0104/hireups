@@ -44,15 +44,15 @@ export function HeroSection() {
   };
 
   const buttonHoverVariants = {
-    rest: { scale: 1 },
-    hover: {
-      scale: 1.02,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut",
-      },
+    rest: {
+      scale: 1,
+      transition: { ease: "easeOut" as const }
     },
-  };
+    hover: {
+      scale: 1.05,
+      transition: { ease: "easeIn" as const }
+    }
+  }
 
   return (
     <section className="relative w-full min-h-screen bg-secondary flex items-center overflow-x-hidden">
