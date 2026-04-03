@@ -1,5 +1,8 @@
 "use client";
 
+const EASE = [0.25, 0.46, 0.45, 0.94] as const;
+
+
 import { motion } from "framer-motion";
 
 export function HeroSection() {
@@ -22,7 +25,7 @@ export function HeroSection() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: EASE,
       },
     },
   };
@@ -35,7 +38,7 @@ export function HeroSection() {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: EASE,
       },
     },
   };
@@ -106,7 +109,7 @@ export function HeroSection() {
                   transition={{
                     duration: 0.8,
                     delay: 1,
-                    ease: [0.25, 0.46, 0.45, 0.94],
+                    ease: EASE,
                   }}
                 />
               </span>{" "}
@@ -124,7 +127,7 @@ export function HeroSection() {
                     transition={{
                       duration: 0.8,
                       delay: 1.3,
-                      ease: [0.25, 0.46, 0.45, 0.94],
+                      ease: EASE,
                     }}
                   />
                 </span></span>

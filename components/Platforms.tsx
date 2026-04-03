@@ -1,4 +1,7 @@
 "use client";
+
+const EASE = [0.25, 0.46, 0.45, 0.94] as const;
+
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -110,7 +113,7 @@ export function Platforms() {
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as [number,number,number,number] }}
+                  transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
                 />
               </span>{" "}
               With the Same Team.
@@ -175,7 +178,7 @@ export function Platforms() {
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as [number,number,number,number] }}
+                  transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
                 />
               </span>
             </h2>

@@ -1,5 +1,8 @@
 "use client";
 
+const EASE = [0.25, 0.46, 0.45, 0.94] as const;
+
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -34,7 +37,7 @@ export function Navbar() {
       transition: {
         delay: 0.1 + i * 0.05,
         duration: 0.4,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: EASE,
       },
     }),
   };
@@ -46,7 +49,7 @@ export function Navbar() {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: EASE,
       },
     },
   };
@@ -79,7 +82,7 @@ export function Navbar() {
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{ duration: 0.6, ease: EASE }}
     >
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo with animation */}
